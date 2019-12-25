@@ -159,3 +159,87 @@ Date:   Wed Dec 25 15:12:33 2019 +0800
 
 fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
 $
+
+$ git staut
+git: 'staut' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        log/
+        readme.txt.bak
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git log/log.txt
+git: 'log/log.txt' is not a git command. See 'git --help'.
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git add log/log.txt
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git commit -m" command study"
+[master e24d605]  command study
+ 1 file changed, 161 insertions(+)
+ create mode 100644 log/log.txt
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git log
+commit e24d605f4d9312e129573430b7a15bf61fcf527d (HEAD -> master)
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 16:03:55 2019 +0800
+
+     command study
+
+commit fb998e5c3c968426bcbce293667792a54d4590b2
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:57:28 2019 +0800
+
+    add a line
+
+commit d28662f8850575dd90be80b6e52c8040df3e2926
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:20:45 2019 +0800
+
+    addnew
+
+commit 2b424cad51a39249ed1fad362f8b9dcd264252bd
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:12:33 2019 +0800
+
+    write a readme file
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        log/log.txt.bak
+        readme.txt.bak
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git add readme.txt
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   readme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        log/log.txt.bak
+        readme.txt.bak
+
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$
