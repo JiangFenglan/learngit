@@ -1,0 +1,161 @@
+
+fenglan.jiang@jiangfenglan MINGW64 ~
+$ cd :d
+bash: cd: :d: No such file or directory
+
+fenglan.jiang@jiangfenglan MINGW64 ~
+$ cd d:
+
+fenglan.jiang@jiangfenglan MINGW64 /d
+$ cd gittets
+bash: cd: gittets: No such file or directory
+
+fenglan.jiang@jiangfenglan MINGW64 /d
+$ cd gittest
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest
+$ pwd
+/d/gittest
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest
+$ git init
+Initialized empty Git repository in D:/gittest/.git/
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ initialized empty Git repository in /d/gittest/.git
+bash: initialized: command not found
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ Initialized empty Git repository in /d/gittest/.git
+bash: Initialized: command not found
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ Initialized empty Git repository in /d/gittest/.git/
+bash: Initialized: command not found
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ Initialized empty Git repository in /d/gittest/.git/
+bash: Initialized: command not found
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git init
+Reinitialized existing Git repository in D:/gittest/.git/
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git add readme.txt
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git commit-m "write a readme file"
+git: 'commit-m' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit-tree
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git commit -m "write a readme file"
+[master (root-commit) 2b424ca] write a readme file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 readme.txt
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git add readme.txt
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git commit -m "addnew"
+[master d28662f] addnew
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git log
+commit d28662f8850575dd90be80b6e52c8040df3e2926 (HEAD -> master)
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:20:45 2019 +0800
+
+    addnew
+
+commit 2b424cad51a39249ed1fad362f8b9dcd264252bd
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:12:33 2019 +0800
+
+    write a readme file
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git reset --hard HEAD^
+HEAD is now at 2b424ca write a readme file
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ cat readme.txt
+Git is a version control system.
+Git is free software.
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git log
+commit 2b424cad51a39249ed1fad362f8b9dcd264252bd (HEAD -> master)
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:12:33 2019 +0800
+
+    write a readme file
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git reset --hard d28662f
+HEAD is now at d28662f addnew
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git log
+
+
+commit d28662f8850575dd90be80b6e52c8040df3e2926 (HEAD -> master)
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:20:45 2019 +0800
+
+    addnew
+
+commit 2b424cad51a39249ed1fad362f8b9dcd264252bd
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:12:33 2019 +0800
+
+    write a readme file
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git log
+commit d28662f8850575dd90be80b6e52c8040df3e2926 (HEAD -> master)
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:20:45 2019 +0800
+
+    addnew
+
+commit 2b424cad51a39249ed1fad362f8b9dcd264252bd
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:12:33 2019 +0800
+
+    write a readme file
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ cat readme.txt
+Git is a version control system,hahaha.
+Git is free software,hehe.
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ cat readme.txt
+Git is a version control system,hahaha.
+Git is free software,hehe.
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$ git log
+commit d28662f8850575dd90be80b6e52c8040df3e2926 (HEAD -> master)
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:20:45 2019 +0800
+
+    addnew
+
+commit 2b424cad51a39249ed1fad362f8b9dcd264252bd
+Author: FinnJiang <fenglan.jiang@chiphomer.com>
+Date:   Wed Dec 25 15:12:33 2019 +0800
+
+    write a readme file
+
+fenglan.jiang@jiangfenglan MINGW64 /d/gittest (master)
+$
