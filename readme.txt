@@ -4,5 +4,11 @@ gui studey
 dsjadshadjashd
 
 changed track
+<<<<<<< HEAD
 
 master 
+=======
+conx
+>>>>>>> conx
+
+creating a new branch
